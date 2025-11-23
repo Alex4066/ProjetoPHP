@@ -1,13 +1,15 @@
 <?php
-
 $host = "localhost";
 $dbname = "sistema";
 $user = "root";
-$pass = "root";
+$pass = "";
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=sistema;charset=utf8",$user,$pass);
-    echo "Conexao realizada com sucesso!<br>";
-    }catch(PDOException $e){
-        echo "Erro ao se conectar:".$e->getMessage();
-    }
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro ao se conectar: " . $e->getMessage());
+}
+?>
+
+
