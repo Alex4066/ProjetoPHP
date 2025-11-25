@@ -1,7 +1,8 @@
 <?php
+include "conexao.php";
 session_start();
 if (isset($_SESSION['usuario_id'])) {
-    header("Location: menudentrodologin.php");
+    header("Location: inserirusuario.php");
     exit;
 }
 ?>
@@ -12,5 +13,5 @@ if (isset($_SESSION['usuario_id'])) {
     Senha: <input type="password" name="senha" required><br>
     <button type="submit">Entrar</button>
 </form>
-<a href="cadastro_usuario.php">Cadastrar novo usuário</a>
+<a href="cadastro.php">Cadastrar novo usuário</a>
 
