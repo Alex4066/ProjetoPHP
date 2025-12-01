@@ -41,6 +41,7 @@ include "cabecalho.php";
 
         <div class="input-group">
             <button type="submit">Cadastrar Produto</button>
+            <a href="listarProdutos.php" class="btn-ver">Ver Produtos Cadastrados</a>
         </div>
         
     </form>

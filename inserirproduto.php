@@ -1,6 +1,6 @@
 <?php
 include "conexao.php";
-
+include "cabecalho.php";
 // Só executa quando o formulário for enviado
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($sql->execute([$nome_prod, $cod_prod, $categoria_prod, $marca_prod, $modelo_prod])) {
         echo "Produto cadastrado com sucesso!";
+        echo "<a href='listarprodutos.php'>Ver Produtos Cadastrados</a>";
     } else {
         echo "Erro ao cadastrar produto.";
     }
