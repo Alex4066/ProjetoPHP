@@ -9,7 +9,7 @@ $acao = $_POST["acao"];
 switch ($acao) {
 
     case "inserir":
-        header("Location: menu.php");
+        header("Location: cadastroProduto.php");
         exit;
 
     case "listar":
@@ -32,3 +32,4 @@ switch ($acao) {
         echo "Ação inválida!";
         break;
 }
+?>
