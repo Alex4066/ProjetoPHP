@@ -11,7 +11,10 @@ $senha = trim($_POST['senha'] ?? '');
 
 // Verifique se os campos não estão vazios
 if (empty($email) || empty($senha)) {
-    die("Preencha todos os campos.");
+    $_SESSION['erro'] = "Preencha todos os campos";
+    header ("Location: login.php");
+    exit;
+    //die("Preencha todos os campos.<br><a href='login.php'>Voltar</a>");
 }
 
 try {
@@ -34,8 +37,11 @@ try {
         exit;  // Certifique-se de chamar exit após header() para interromper a execução do script
     } else {
         // Caso o e-mail ou senha estejam incorretos
-        echo "Email ou senha incorretos.<br>";
-        echo "<a href='login.php'>Voltar ao login</a>";
+        //echo "Email ou senha incorretos.<br>";
+        //echo "<a href='login.php'>Voltar ao login</a>";
+        $_SESSION['erro'] = "email ou senha incorretos";
+        header("Location: login.php");
+        exit;
     }
 
 } catch (PDOException $e) {

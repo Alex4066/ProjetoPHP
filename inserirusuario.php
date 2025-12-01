@@ -12,14 +12,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
  
     // Criptografa a senha
-    //$senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
  
     try {
-        $sql = $pdo->prepare("INSERT INTO cadastro_usuario (nome_usuario, email_usuario, senha_usuario) VALUES (:nome, :email, :senha);");
+        $sql = $pdo->prepare("INSERT INTO cadastro_usuario (nome_usuario, email_usuario, senha_usuario) VALUES (:nome, :email, :senha)");
  
         $sql->bindParam(":nome", $nome);
         $sql->bindParam(":email", $email);
-        $sql->bindParam(":senha", $senha);
+        $sql->bindParam(":senha", $senhaHash);
  
         $sql->execute();
  
