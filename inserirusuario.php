@@ -1,6 +1,6 @@
 <?php
 include "conexao.php";
- 
+include "cabecalho.php";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
  
     $nome  = trim($_POST["nome"] ?? '');
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $sql->execute();
  
         echo "Cadastro realizado com sucesso!<br>";
-        echo "<a href='index.php'>Voltar ao menu</a>";
+        echo "<a href='login.php'>Voltar ao login</a>";
  
     } catch (PDOException $e) {
         die("Erro ao cadastrar usuário: " . $e->getMessage());

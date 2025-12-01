@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 
 if (!isset($_SESSION['usuario_id'])) {
@@ -43,8 +42,9 @@ include "cabecalho.php";
         <div class="input-group">
             <button type="submit">Cadastrar Produto</button>
         </div>
-        <a href="login.php?logout=1" class="logout">Sair</a>
+        
     </form>
+    <a href="login.php?logout=1" class="logout">Sair</a>
 </div>
 
 </body>

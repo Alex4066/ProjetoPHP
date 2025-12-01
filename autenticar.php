@@ -33,7 +33,7 @@ try {
         $_SESSION['usuario_nome'] = $usuario['nome_usuario'];
 
         // Redirecione para a página de sucesso ou área protegida
-        header("Location: inserirusuario.php");
+        header("Location: cadastroProduto.php");
         exit;  // Certifique-se de chamar exit após header() para interromper a execução do script
     } else {
         // Caso o e-mail ou senha estejam incorretos
