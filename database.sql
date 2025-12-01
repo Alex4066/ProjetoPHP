@@ -1,5 +1,5 @@
-create database sistema;
-use sistema;
+create database Sistema;
+use Sistema;
 
 create table cadastro_produto(
 id_produto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

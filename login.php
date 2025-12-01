@@ -1,15 +1,16 @@
 <?php
-session_start();
-session_unset();
-//session_destroy();
-// include "cabecalho.php"; //inclui o cabeçalho com a conexão ou o menu
 
-session_start(); // Inicia a sessão
+session_start();
 
 if (isset($_SESSION['usuario_id'])) {
-    header("Location: inserirusuario.php"); // Se já estiver logado, redireciona
+    header("Location: cadastroProduto.php"); // Redireciona para cadastro de produto
     exit;
 }
+
+include "conexao.php";
+include "cabecalho.php";
+?>
+
 
 include "conexao.php"; 
 include "cabecalho.php"; // Inclui o cabeçalho com a conexão ou o menu

@@ -28,22 +28,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
-
-<!-- Formulário de cadastro -->
-<form method="POST">
-    Nome: <input type="text" name="nome_prod"><br>
-    Código: <input type="text" name="cod_prod"><br>
-    Categoria: <input type="text" name="categoria_prod"><br>
-    Marca: <input type="text" name="marca_prod"><br>
-    Modelo: <input type="text" name="modelo_prod"><br>
-
-    <button type="submit">Cadastrar Produto</button>
-</form>
-
-<!-- Menu de ações -->
-<form action="acoes.php" method="POST">
-  <button type="submit" name="acao" value="listar">Listar Produtos</button>
-  <button type="submit" name="acao" value="adicionar">Adicionar Produto</button>
-  <button type="submit" name="acao" value="alterar">Alterar Produto</button>
-  <button type="submit" name="acao" value="deletar">Deletar Produto</button>
-</form>
